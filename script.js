@@ -100,7 +100,7 @@ const products = [
                     Untuk ekstra kenyamanan, Swiftland dilengkapi dengan karet elastis di bagian pinggang dan pergelangan tangan yang fleksibel mengikuti gerak tubuh. Dilengkapi juga dengan hoodie dan 2 kantong tangan dengan zippers.`,
         price : 325000,
         stock : 999,
-        image_url : "/image/model1.png",
+        image_url : "https://wildanizhara.github.io/e-commerce-waskerStore/image/model1.png",
         date : new Date(),
     },
     {
