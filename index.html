@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="other.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Pridi:wght@200;300;400;500;600;700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body class="min-w-[500px]">
+    <header class="flex items-center justify-between p-5">
+        <h2 class="text-2xl font-bold italic"><span class="text-blue-600">Wasker</span>Store</h2>
+        <nav>
+            <ul class="hidden md:flex gap-6 text-lg *:hover:text-blue-600">
+                <li><a href="#" class="text-blue-600 font-semibold">Home</a></li>
+                <li><a href="/cart/">Cart</a></li>
+                <li><a href="/products/">Products</a></li>
+                <li><a href="/contact">Contact us</a></li>
+            </ul>
+            <div class="md:hidden" id="hamburger_menu">
+                <label for="show_menu" class="flex flex-col gap-1.5 cursor-pointer">
+                    <div class="w-10 h-1 bg-black/90 rounded-lg"></div>
+                    <div class="w-10 h-1 bg-black/90 rounded-lg"></div>
+                    <div class="w-10 h-1 bg-black/90 rounded-lg"></div>
+                </label>
+                <input type="checkbox" name="" id="show_menu" class="hidden" value="false">
+                <div class="hidden group w-full h-screen fixed top-0 left-0  z-50" id="hamburger_menu_2">
+                    <ul class="flex flex-col items-center gap-4 text-lg *:hover:text-blue-600 bg-black/40 p-5">
+                        <li><a href="#" class="text-blue-600 font-semibold">Home</a></li>
+                        <li><a href="/cart/">Cart</a></li>
+                        <li><a href="/products/">Products</a></li>
+                        <li><a href="/contact">Contact us</a></li>
+                    </ul>
+                    <p class="font-bold text-3xl text-white/90 absolute top-4 right-10" id="close_navbar">X</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="w-[95%] h-[400px] flex items-center justify-between p-12">
+        
+        <aside class="max-w-[380px]" name="left">
+            <h2 class="text-2xl font-bold italic">Welcome to our store!</h2>
+            <p>Selamat datang WaskerStore, <br>Kami menyediakan baju-baju yang modern serta jaket jaket yang dibilang cukup keren!</p>    
+            <div class="mt-2 text-white/80 *:hover:text-white">
+                <button class="bg-blue-400 p-1.5 rounded-sm font-semibold text-sm cursor-pointer italic" type="submit">Lihat Produk</button>
+                <button class="bg-blue-400 p-1.5 rounded-sm font-semibold text-sm cursor-pointer" type="submit">Tentang Kami!</button>
+            </div>
+        </aside>
+
+        <aside name="right">
+            <img 
+            class="h-[250px] drop-shadow-xl"
+            src="/image/model1.png" alt="model1">
+        </aside>
+    </div>
+
+    <main>
+
+        <div class="w-full flex flex-col items-center h-max bg-slate-700/80 p-10">
+            <h2 class="w-full font-bold text-2xl text-center">Why Should Our Store?</h2>
+           <div class="w-full md:w-9/12 mt-4 bg-white shadow-lg flex flex-wrap justify-between rounded-sm p-5">
+                <div class="w-[50%] p-2">
+                    <h4 class="font-bold italic">We Provide</h4>
+                    <p class="md:w-[350px] text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque animi atque at laboriosam quasi quisquam praesentium voluptates voluptatibus velit tempore?</p>
+                </div>
+                <div class="w-max p-2">
+                    <h4 class="font-bold italic">We Provide</h4>
+                    <p class="md:w-[350px] text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque animi atque at laboriosam quasi quisquam praesentium voluptates voluptatibus velit tempore?</p>
+                </div>
+                <div class="w-[50%] p-2">
+                    <h4 class="font-bold italic">We Provide</h4>
+                    <p class="md:w-[350px] text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque animi atque at laboriosam quasi quisquam praesentium voluptates voluptatibus velit tempore?</p>
+                </div>
+                <div class="w-max p-2">
+                    <h4 class="font-bold italic">We Provide</h4>
+                    <p class="md:w-[350px] text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque animi atque at laboriosam quasi quisquam praesentium voluptates voluptatibus velit tempore?</p>
+                </div>
+           </div>
+        </div>
+
+        <div class="bg-black/30 p-5 flex flex-col gap-3" name="products">
+            <h2 class="text-2xl font-bold italic">Populer</h2>
+            <div class="flex gap-2 overflow-hidden overflow-x-scroll" id="populer_product">
+                <!-- content right here -->
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+    <!-- modal item -->
+
+    <div class="w-full h-full fixed top-0 left-0 hidden items-center justify-center bg-red-600/20" id="detail_product">
+        <div class="w-96 bg-white p-1 px-3 flex flex-col gap-5">
+            <div class="flex justify-between items-center p-2 border-b-black border-b-1">
+                <h2 class="font-bold text-xl italic">Detail Produk</h2>
+                <butotn class="font-bold text-xl text-black/80 cursor-pointer" id="close_detail_product">X</butotn>
+            </div>
+           <div class="flex justify-center">
+                <img class="h-40" src="/image/model1.png" alt="model" id="image_product">
+           </div>
+            <div class="flex flex-col gap-2 max-h-52 overflow-hidden overflow-y-scroll">
+                <h2 class="font-bold text-lg leading-5 text-black/80" id="title_product">Consina Swiftland Jaket Urban Ringan | Outdoor Hiking Riding</h2>
+                <p class="w-full font-medium text-black/90 text-lg" id="price_product">Rp.325.000,00</p>
+                <p id="description_product">
+                    Menggunakan bahan Premium Breathable Nylon untuk kegiatan luar ruang dan urban, Consina Swiftland Jacket adalah jaket ideal untuk berbagai kegiatan.
+                    Karakternya yang ringan, breathable dan fleksibel, membuat Consina Swiftland kandidat kuat untuk berbagai activity: Travelling, Light Hiking, Urban Riding, Campus atau hangout santai bersama teman.
+                    Untuk ekstra kenyamanan, Swiftland dilengkapi dengan karet elastis di bagian pinggang dan pergelangan tangan yang fleksibel mengikuti gerak tubuh. Dilengkapi juga dengan hoodie dan 2 kantong tangan dengan zippers.
+                </p>
+            </div>
+            <div class="mb-2 flex justify-end gap-2">
+                <div class="flex gap-2 font-bold text-xl h-max" id="qty_product">
+                    <img class="h-8 cursor-pointer" src="/image/ic_increase.svg" alt="">
+                    <input class="w-10 text-center font-normal text-xl" type="text" inputmode="numeric" value="1">
+                    <img class="h-8 cursor-pointer" src="/image/ic_decrease.svg" alt="">
+                </div>
+                <button class="p-1.5 bg-blue-900 text-white text-lg font-semibold itlaic rounded-lg cursor-pointer" id="btn_add_to_cart" id_product="1">Add to cart</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="h-[20vh] min-h[200px] p-5 bg-slate-700/80">
+        <h2 class="font-bold text-3xl">Contact Us</h2>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
+
